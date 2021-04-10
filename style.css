@@ -87,22 +87,22 @@ p {
 }
 
 .logo {
-    background-image: url(images/logo.png;);
+    background-image: url(images/logo.png);
     margin-right: 30px;
 }
 
 .tag_vacancy {
-    background-image: url(images/tag_vacancy.png;);
+    background-image: url(images/tag_vacancy.png);
 }
 
 .tag_fulltime {
-    background-image: url(images/tag_fulltime.png;);
+    background-image: url(images/tag_fulltime.png);
 }
 
 .tag_remote {
-    background-image: url(images/tag_remote.png;);
+    background-image: url(images/tag_remote.png);
 }
 
 .tag_office {
-    background-image: url(images/tag_office.png;);
+    background-image: url(images/tag_office.png);
 }
