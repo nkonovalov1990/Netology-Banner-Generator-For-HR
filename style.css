@@ -1,0 +1,104 @@
+@font-face {
+    font-family: Golos;
+    src: url(fonts/GolosText_Black.ttf);
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: Golos;
+    src: url(fonts/GolosText_Bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: Golos;
+    src: url(fonts/GolosText_DemiBold.ttf);
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: Golos;
+    src: url(fonts/GolosText_Medium.ttf);
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: Golos;
+    src: url(fonts/GolosText_Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    font-family: 'Golos';
+    vertical-align: baseline;
+    display: flex;
+    color: white;
+}
+
+h1 {
+    font-family: Golos;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 75px;
+}
+
+p {
+    font-family: Golos;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.banner {
+    width: 1200px;
+    height: 600px;
+    background-color: #141414;
+    transform: scale(0.5);
+    padding-left: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner .text {
+    width: 570px;
+}
+
+.banner .circle {
+    width: 600px;
+    height: 600px;
+    border-radius: 600px;
+    background-color: white;
+}
+
+.head, .tags {
+    height: 60px;
+}
+
+.logo {
+    background-image: url(images/logo.png;);
+    margin-right: 30px;
+}
+
+.tag_vacancy {
+    background-image: url(images/tag_vacancy.png;);
+}
+
+.tag_fulltime {
+    background-image: url(images/tag_fulltime.png;);
+}
+
+.tag_remote {
+    background-image: url(images/tag_remote.png;);
+}
+
+.tag_office {
+    background-image: url(images/tag_office.png;);
+}
