@@ -47,6 +47,7 @@ h1 {
     font-weight: bold;
     font-size: 72px;
     line-height: 75px;
+    margin-bottom: 45px;
 }
 
 p {
@@ -78,8 +79,17 @@ p {
     background-color: white;
 }
 
-.head, .tags {
+.head,
+.tags,
+.logo,
+.tag_vacancy,
+.tag_fulltime,
+.tag_remote,
+.tag_office
+ {
     height: 60px;
+    background-size: contain;
+    display: flex;
 }
 
 .head {
@@ -89,20 +99,25 @@ p {
 .logo {
     background-image: url(images/logo.png);
     margin-right: 30px;
+    width: 60px;
 }
 
 .tag_vacancy {
     background-image: url(images/tag_vacancy.png);
+    width: 198px;
 }
 
 .tag_fulltime {
     background-image: url(images/tag_fulltime.png);
+    width: 212px;
 }
 
 .tag_remote {
     background-image: url(images/tag_remote.png);
+    width: 199px;
 }
 
 .tag_office {
     background-image: url(images/tag_office.png);
+    width: 135px;
 }
