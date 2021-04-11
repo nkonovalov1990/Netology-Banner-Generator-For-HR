@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>Генератор баннеров для HR Нетологии</title>
         <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
     <body>
         <div class="banner" id="banner">
@@ -19,7 +20,7 @@
                     <p>Описание вакансии</p>
                 </div>
                 <div class="tag_fill">
-                    <div class="tag_fulltime">фулл тайм</div>
+                    <div class="tag_fulltime">фулл&nbsp;тайм</div>
                     <div class="tag_remote">удалёнка</div>
                     <div class="tag_office">офис</div>
                 </div>
@@ -27,7 +28,7 @@
             <div class="circle">
             </div>
         </div>
-        <input id="clickMe" type="button" value="clickme" onclick="html2canvas();" />
+        <input type="button" class="button" value="Сделать картинку" onclick="HTMLToCanvas()">
         <script src="html2canvas.min.js"></script>
         <script src="script.js"></script>
     </body>
