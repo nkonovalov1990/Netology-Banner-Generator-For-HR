@@ -51,6 +51,7 @@ h1 {
     font-weight: bold;
     font-size: 72px;
     line-height: 75px;
+    margin-top: 0;
     margin-bottom: 45px;
 }
 
@@ -80,10 +81,12 @@ p {
     color: white;
 }
 
+.banner .head {
+    margin-bottom: 84px;
+}
+
 .banner .text {
     width: 570px;
-    display: flex;
-    flex-wrap: wrap;
     padding-top: 30px;
     padding-bottom: 30px;
 }
