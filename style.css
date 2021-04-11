@@ -155,28 +155,50 @@ p {
 .button {
     margin-top: 30px;
     margin-bottom: 30px;
-    background: #0066FF;
-    color: white;
     font-weight: 500;
     font-size: 32px;
-    border: 0;
     border-radius: 4px;
     padding-top: 48px;
     padding-left: 96px;
     padding-right: 96px;
     padding-bottom: 48px;
     transition: 0.25s;
-
 }
 
 .button:hover {
     cursor: pointer;
-    background: #005CE5;
     transition: 0.25s;
 }
 
 .button:active,
 .button:focus {
-    border: 0;
     outline: none;
+}
+
+.major {
+    background: #0066FF;
+    color: white;
+    border: 0;
+}
+
+.major:hover {
+    background: #005CE5;
+}
+
+.minor {
+    background: white;
+    color: black;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+.minor:hover {
+    background: rgba(0,0,0,0.05);
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.fileUpload {
+    display: inline-block;
 }

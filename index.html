@@ -25,10 +25,17 @@
                     <div class="tag_office">офис</div>
                 </div>
             </div>
-            <div class="circle">
+            <div class="circle" id="circle">
             </div>
         </div>
-        <input type="button" class="button" value="Сделать картинку" onclick="HTMLToCanvas()">
+
+        <label for="getval" class="button minor fileUpload">
+            <i class="fa fa-cloud-upload"></i> Выбрать каритнку для круга
+        </label>
+        <input id="getval" type="file" name="background-image">
+
+        <!-- <input type='file' id='getval' class="button minor" name="background-image" value="Выбрать картинку для круга"> -->
+        <input type="button" class="button major" value="Сделать картинку" onclick="HTMLToCanvas()">
         <script src="html2canvas.min.js"></script>
         <script src="script.js"></script>
     </body>
