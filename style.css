@@ -52,7 +52,7 @@ h1 {
     font-size: 72px;
     line-height: 75px;
     margin-top: 0;
-    margin-bottom: 45px;
+    margin-bottom: 30px;
 }
 
 p {
@@ -81,17 +81,18 @@ p {
     color: white;
 }
 
-.banner .head {
+.head {
+    display: flex;
     margin-bottom: 84px;
 }
 
-.banner .text {
+.text {
     width: 570px;
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
-.banner .circle {
+.circle {
     width: 600px;
     height: 600px;
     border-radius: 600px;
@@ -108,7 +109,7 @@ p {
  {
     height: 60px;
     background-size: contain;
-    display: inline-block;
+    line-height: 58px;
 }
 
 .logo {
@@ -133,4 +134,16 @@ p {
     padding-right: 30px;
     margin-left: 0;
     margin-right: 0;
+}
+
+.tag_stroke {
+    color: white;
+    border: 2px solid white;
+    border-radius: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 30px;
+    /* line-height: 36px; */
 }
