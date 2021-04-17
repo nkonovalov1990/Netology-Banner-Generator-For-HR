@@ -232,7 +232,7 @@ canvas {
 }
 
 .inputRadio {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 input[type=text] {
@@ -248,7 +248,7 @@ input[type=text] {
 
 input[type="radio"] {
     cursor: pointer;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 input[type="file"] {
