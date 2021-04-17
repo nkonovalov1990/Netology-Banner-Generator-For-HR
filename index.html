@@ -7,31 +7,19 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
     <body>
-        <div class="banner" id="banner">
-            <div class="text">
-                <div class="head">
-                    <div class="logo"></div>
-                    <div class="tag_stroke tag_vacancy">вакансия</div>
-                </div>
-                <div class="title">
-                    <h1>Название вакансии</h1>
-                </div>
-                <div class="description">
-                    <p>Описание вакансии</p>
-                </div>
-                <div class="tag_fill">
-                    <div class="tag_fulltime">фулл&nbsp;тайм</div>
-                    <div class="tag_remote">удалёнка</div>
-                    <div class="tag_office">офис</div>
-                </div>
-            </div>
-            <div class="circle" id="circle">
-            </div>
-        </div>
-
         <div class="contorls">
-            <form>
-                <p>Выбери цвет фона</p>
+
+            <form class="inputText">
+                <label for="title">Название вакансии</label><br>
+                <input type="text" id="title" name="title"><br>
+
+                <label for="description">Описание вакансии</label><br>
+                <input type="text" id="description" name="description"><br>
+                
+            </form>
+
+            <form class="inputRadio">
+                <p class="medium">Цвет фона</p>
                 
                 <input type="radio" name="BannerColor" id="black" onClick="changeColor()" value="#141414" checked>
                 <label class="pointer" for="black">Черный</label><br>
@@ -59,7 +47,29 @@
                 <input id="getval" type="file" name="background-image">
             </form>
             <input type="button" class="button major" value="Сделать картинку" onclick="HTMLToCanvas()">
+        
         </div>
+
+        <div class="banner" id="banner">
+            <div class="text">
+                <div class="head">
+                    <div class="logo"></div>
+                    <div class="tag_stroke tag_vacancy">вакансия</div>
+                </div>
+                <div>
+                    <h1 class="title">Название вакансии</h1>
+                    <p class="description">Описание вакансии</p>
+                </div>
+                <div class="tag_fill">
+                    <div class="tag_fulltime">фулл&nbsp;тайм</div>
+                    <div class="tag_remote">удалёнка</div>
+                    <div class="tag_office">офис</div>
+                </div>
+            </div>
+            <div class="circle" id="circle">
+            </div>
+        </div>
+
         <script src="html2canvas.min.js"></script>
         <script src="script.js"></script>
     </body>

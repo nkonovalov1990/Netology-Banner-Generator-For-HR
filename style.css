@@ -30,7 +30,7 @@
 }
 
 body {
-    background-color: #E5E5E5;
+    background-color: #F2F2F2;
     margin: 0;
     padding: 50px 0 0 50px;
     border: 0;
@@ -41,6 +41,7 @@ body {
     justify-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
+    font-size: 16px;
 }
 
 div {
@@ -58,16 +59,35 @@ h1 {
     margin-bottom: 30px;
 }
 
+h2 {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 32px;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+}
+
 p {
     font-family: Golos;
     font-style: normal;
     font-weight: normal;
+}
+
+.banner p {
     font-size: 30px;
     line-height: 40px;
 }
 
 .pointer {
     cursor: pointer;
+}
+
+.medium {
+    font-weight: 500;
 }
 
 .banner {
@@ -78,15 +98,15 @@ p {
     display: flex;
     justify-content: space-between;
     zoom: 0.5;
-    margin-right: 100px;
 }
 
 canvas {
     zoom: 0.5;
 }
 
-.controls {
+.contorls {
     zoom: 1;
+    margin-right: 100px;
 }
 
 .head,
@@ -96,9 +116,12 @@ canvas {
     margin-left: 30px;
 }
 
+.description {
+    display: none;
+}
+
 .head {
     display: flex;
-    margin-bottom: 84px;
 }
 
 .text {
@@ -106,6 +129,9 @@ canvas {
     padding-top: 30px;
     padding-bottom: 30px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .circle {
@@ -135,8 +161,6 @@ canvas {
 }
 
 .tag_fill {
-    position: absolute;
-    bottom: 30px;
     font-size: 30px;
     line-height: 36px;
     display: flex;
@@ -162,10 +186,6 @@ canvas {
     margin-right: 0;
     font-size: 30px;
 }
-
-/* canvas {
-    visibility: hidden;
-} */
 
 .button {
     margin-top: 15px;
@@ -194,6 +214,7 @@ canvas {
     background-color: #0066FF;
     color: white;
     border: 0;
+    width: 100%;
 }
 
 .major:hover {
@@ -208,6 +229,21 @@ canvas {
 
 .minor:hover {
     background-color: rgba(0,0,0,0.05);
+}
+
+.inputRadio {
+    margin-bottom: 15px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 15px 10px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 2px;
+    font-size: 16px;
 }
 
 input[type="radio"] {

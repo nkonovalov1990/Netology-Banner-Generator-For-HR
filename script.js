@@ -1,3 +1,19 @@
+$("#title").keyup(function(){
+        var str = $("#title").val();
+        $(".title").text(str);
+    });
+
+$("#description").keyup(function(){
+        var str = $("#description").val();
+        if ( str != null){
+            var str = $("#description").val();
+            $(".description").css('display', 'block')
+            $(".description").text(str);
+        } else {
+            $(".description").css('display', 'none')
+        }
+    });
+
 function changeColor(){
     var BannerColor = $('input[name="BannerColor"]:checked').val();
     if ( BannerColor != '#FFFFFF') {
