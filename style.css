@@ -30,16 +30,17 @@
 }
 
 body {
+    background-color: #E5E5E5;
     margin: 0;
-    padding: 0;
+    padding: 50px 0 0 50px;
     border: 0;
     font-family: 'Golos';
     vertical-align: baseline;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    flex-direction: column;
-    zoom: 0.5;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 div {
@@ -65,13 +66,27 @@ p {
     line-height: 40px;
 }
 
+.pointer {
+    cursor: pointer;
+}
+
 .banner {
     width: 1200px;
     height: 600px;
-    background: #141414;
+    background-color: #141414;
     color: white;
     display: flex;
     justify-content: space-between;
+    zoom: 0.5;
+    margin-right: 100px;
+}
+
+canvas {
+    zoom: 0.5;
+}
+
+.controls {
+    zoom: 1;
 }
 
 .head,
@@ -129,7 +144,7 @@ p {
 
 .tag_fill div {
     color: #141414;
-    background: white;
+    background-color: white;
     border-radius: 30px;
     padding-left: 30px;
     padding-right: 30px;
@@ -153,15 +168,15 @@ p {
 } */
 
 .button {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     font-weight: 500;
-    font-size: 32px;
-    border-radius: 4px;
-    padding-top: 48px;
-    padding-left: 96px;
-    padding-right: 96px;
-    padding-bottom: 48px;
+    font-size: 16px;
+    border-radius: 2px;
+    padding-top: 24px;
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-bottom: 24px;
     transition: 0.25s;
 }
 
@@ -176,23 +191,28 @@ p {
 }
 
 .major {
-    background: #0066FF;
+    background-color: #0066FF;
     color: white;
     border: 0;
 }
 
 .major:hover {
-    background: #005CE5;
+    background-color: #005CE5;
 }
 
 .minor {
-    background: white;
+    background-color: rgba(255, 255, 255, 0.5);
     color: black;
     border: 1px solid rgba(0,0,0,0.2);
 }
 
 .minor:hover {
-    background: rgba(0,0,0,0.05);
+    background-color: rgba(0,0,0,0.05);
+}
+
+input[type="radio"] {
+    cursor: pointer;
+    margin-bottom: 15px;
 }
 
 input[type="file"] {

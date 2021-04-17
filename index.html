@@ -29,13 +29,37 @@
             </div>
         </div>
 
-        <label for="getval" class="button minor fileUpload">
-            <i class="fa fa-cloud-upload"></i> Выбрать каритнку для круга
-        </label>
-        <input id="getval" type="file" name="background-image">
+        <div class="contorls">
+            <form>
+                <p>Выбери цвет фона</p>
+                
+                <input type="radio" name="BannerColor" id="black" onClick="changeColor()" value="#141414" checked>
+                <label class="pointer" for="black">Черный</label><br>
 
-        <!-- <input type='file' id='getval' class="button minor" name="background-image" value="Выбрать картинку для круга"> -->
-        <input type="button" class="button major" value="Сделать картинку" onclick="HTMLToCanvas()">
+                <input type="radio" name="BannerColor" id="white" onClick="changeColor()" value="#FFFFFF">
+                <label class="pointer" for="white">Белый</label><br>
+
+                <input type="radio" name="BannerColor" id="red" onClick="changeColor()"value="#EB236B">
+                <label class="pointer" for="red">Красный</label><br>
+
+                <input type="radio" name="BannerColor" id="green" onClick="changeColor()" value="#4BD0A0">
+                <label class="pointer" for="green">Зеленый</label><br>
+
+                <input type="radio" name="BannerColor" id="blue" onClick="changeColor()" value="#0066FF">
+                <label class="pointer" for="blue">Синий</label><br>
+
+                <input type="radio" name="BannerColor" id="violet" onClick="changeColor()" value="#5D00F5">
+                <label class="pointer" for="violet">Фиолетовый</label><br>
+            </form>
+
+            <form>
+                <label for="getval" class="button minor fileUpload">
+                    <i class="fa fa-cloud-upload"></i> Выбрать каритнку для круга
+                </label>
+                <input id="getval" type="file" name="background-image">
+            </form>
+            <input type="button" class="button major" value="Сделать картинку" onclick="HTMLToCanvas()">
+        </div>
         <script src="html2canvas.min.js"></script>
         <script src="script.js"></script>
     </body>
