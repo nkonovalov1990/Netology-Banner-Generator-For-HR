@@ -74,3 +74,8 @@ function HTMLToCanvas()
         });
     }, 100);
 }
+
+function backgroundSizeChange() {
+    var BGsize = document.getElementById("BackgroundSizeID").value;
+    $(".circle").css('background-size', BGsize + "%");
+}

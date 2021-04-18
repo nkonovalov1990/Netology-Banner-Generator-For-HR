@@ -243,6 +243,10 @@ canvas {
     margin-bottom: 5px;
 }
 
+.range {
+    margin-bottom: 30px;
+}
+
 input[type=text] {
     width: 100%;
     padding: 15px 10px;
@@ -261,6 +265,10 @@ input[type="radio"] {
 
 input[type="file"] {
     display: none;
+}
+
+input[type="range"] {
+    width: 100%;
 }
 
 input[type="button"] {
