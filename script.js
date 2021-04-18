@@ -62,7 +62,7 @@ function readURL(){
 
 function HTMLToCanvas()
 {
-    document.querySelector('canvas').outerHTML = "";
+    // document.querySelector('canvas').outerHTML = "";
 
     html2canvas(document.querySelector("#banner")).then(canvas => {
         document.body.appendChild(canvas)  
