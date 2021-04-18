@@ -63,6 +63,16 @@ function readURL(){
 function HTMLToCanvas()
 {
     html2canvas(document.querySelector("#banner")).then(canvas => {
-        document.body.appendChild(canvas)
-    });
+        document.body.appendChild(canvas)  
+    });;
+
+    setTimeout(function() {
+        document.querySelector('canvas').setAttribute("download", "banner.png");
+    }, 200);
+
+    setTimeout(function() {
+        document.querySelector('canvas').toBlob(function(blob) {
+                saveAs(blob, "pretty image.png");
+        });
+    }, 1000);
 }

@@ -77,13 +77,17 @@ p {
     font-weight: normal;
 }
 
+.pointer {
+    cursor: pointer;
+}
+
+.none {
+    display: none;
+}
+
 .banner p {
     font-size: 30px;
     line-height: 40px;
-}
-
-.pointer {
-    cursor: pointer;
 }
 
 .medium {
@@ -105,7 +109,6 @@ canvas {
 }
 
 .contorls {
-    zoom: 1;
     margin-right: 100px;
 }
 
@@ -128,7 +131,6 @@ canvas {
     width: 570px;
     padding-top: 30px;
     padding-bottom: 30px;
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -139,6 +141,11 @@ canvas {
     height: 600px;
     border-radius: 600px;
     background-color: white;
+    cursor: grab;
+}
+
+.circle:active {
+    cursor: grabbing;
 }
 
 .head,
