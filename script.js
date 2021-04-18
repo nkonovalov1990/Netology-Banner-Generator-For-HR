@@ -62,17 +62,19 @@ function readURL(){
 
 function HTMLToCanvas()
 {
+    document.querySelector('canvas').outerHTML = "";
+
     html2canvas(document.querySelector("#banner")).then(canvas => {
         document.body.appendChild(canvas)  
     });;
 
     setTimeout(function() {
         document.querySelector('canvas').setAttribute("download", "banner.png");
-    }, 200);
+    }, 100);
 
     setTimeout(function() {
         document.querySelector('canvas').toBlob(function(blob) {
                 saveAs(blob, "netology_banner.png");
         });
-    }, 1000);
+    }, 200);
 }
