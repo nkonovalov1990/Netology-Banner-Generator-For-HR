@@ -72,7 +72,7 @@ function HTMLToCanvas()
 
     setTimeout(function() {
         document.querySelector('canvas').toBlob(function(blob) {
-                saveAs(blob, "pretty image.png");
+                saveAs(blob, "netology_banner.png");
         });
     }, 1000);
 }
