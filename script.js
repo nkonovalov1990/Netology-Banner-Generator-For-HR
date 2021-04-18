@@ -68,13 +68,13 @@ function HTMLToCanvas()
         document.body.appendChild(canvas)  
     });;
 
-    setTimeout(function() {
-        document.querySelector('canvas').setAttribute("download", "banner.png");
-    }, 100);
+    // setTimeout(function() {
+    //     document.querySelector('canvas').setAttribute("download", "banner.png");
+    // }, 100);
 
     setTimeout(function() {
         document.querySelector('canvas').toBlob(function(blob) {
                 saveAs(blob, "netology_banner.png");
         });
-    }, 200);
+    }, 100);
 }
