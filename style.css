@@ -32,13 +32,13 @@
 body {
     background-color: #F2F2F2;
     margin: 0;
-    padding: 50px 0 0 50px;
+    padding: 50px 50px 0 50px;
     border: 0;
     font-family: 'Golos';
     vertical-align: baseline;
     display: flex;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     flex-direction: row;
     flex-wrap: wrap;
     font-size: 16px;
@@ -106,7 +106,8 @@ p {
 
 canvas {
     zoom: 0.5;
-    visibility: hidden;
+    display: none;
+    /* visibility: hidden; */
 }
 
 .contorls {
