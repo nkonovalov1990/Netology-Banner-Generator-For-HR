@@ -8,26 +8,6 @@
     </head>
     <body>
 
-        <div class="banner" id="banner">
-            <div class="text">
-                <div class="head">
-                    <div class="logo"></div>
-                    <div class="tag_stroke tag_vacancy">вакансия</div>
-                </div>
-                <div>
-                    <h1 class="title">Название вакансии</h1>
-                    <p class="description">Описание вакансии</p>
-                </div>
-                <div class="tag_fill">
-                    <div class="tag_fulltime">фулл&nbsp;тайм</div>
-                    <div class="tag_remote">удалёнка</div>
-                    <div class="tag_office">офис</div>
-                </div>
-            </div>
-            <div class="circle" id="circle">
-            </div>
-        </div>
-
         <div class="contorls">
 
             <form class="inputText">
@@ -78,17 +58,41 @@
         
         </div>
 
+        <div id="container">
+            <div class="banner" id="banner">
+                <div class="text">
+                    <div class="head">
+                        <div class="logo"></div>
+                        <div class="tag_stroke tag_vacancy">вакансия</div>
+                    </div>
+                    <div>
+                        <h1 class="title">Название вакансии</h1>
+                        <p class="description">Описание вакансии</p>
+                    </div>
+                    <div class="tag_fill">
+                        <div class="tag_fulltime">фулл&nbsp;тайм</div>
+                        <div class="tag_remote">удалёнка</div>
+                        <div class="tag_office">офис</div>
+                    </div>
+                </div>
+                <div class="circle" id="circle">
+                </div>
+            </div>
+            </br>
+        </div>
+
         <p class="none">
             <input type="text" id="XYdata">
         </p>        
 
+        </br>
         <canvas></canvas>
 
-        <script src="html2canvas.min.js"></script>
+        <script src="script.js"></script>
         <script src="canvas-toBlob.js"></script>
         <script src="FileSaver.js"></script>
-        <script src="script.js"></script>
         <script src="draggableBG.js"></script>
+        <script src="html2canvas.min.js"></script>
         
     </body>
 </html>

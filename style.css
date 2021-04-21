@@ -107,7 +107,7 @@ p {
 canvas {
     zoom: 0.5;
     display: none;
-    /* visibility: hidden; */
+    visibility: hidden;
 }
 
 .contorls {

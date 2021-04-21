@@ -64,8 +64,8 @@ function HTMLToCanvas()
 {
     document.querySelector('canvas').outerHTML = "";
 
-    html2canvas(document.querySelector("#banner")).then(canvas => {
-        document.body.appendChild(canvas)  
+    html2canvas(document.querySelector("#container")).then(canvas => {
+        document.getElementById("container").appendChild(canvas)  
     });;
 
     setTimeout(function() {
