@@ -70,8 +70,8 @@ function HTMLToCanvas()
 {
     document.querySelector('canvas').outerHTML = "";
 
-    html2canvas(document.querySelector("#banner")).then(canvas => {
-        document.querySelector("canvas").appendChild(canvas)  
+    html2canvas(document.querySelector('#banner')).then(canvas => {
+        document.querySelector('.result').appendChild(canvas)  
     });;
 
     setTimeout(function() {

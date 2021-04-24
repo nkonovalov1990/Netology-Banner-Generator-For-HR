@@ -1,159 +1,78 @@
-@font-face {
-    font-family: Golos;
-    src: url(fonts/GolosText_Black.ttf);
-    font-weight: 900;
-    font-style: normal;
+.banner
+{
+	background-color: #141414;
+	color: white;
+	display: flex;
+	height: 600px;
+	justify-content: space-between;
+	width: 1200px;
+	zoom: 0.5;
 }
-@font-face {
-    font-family: Golos;
-    src: url(fonts/GolosText_Bold.ttf);
-    font-weight: 700;
-    font-style: normal;
+.banner p
+{
+	font-size: 30px;
+	line-height: 40px;
 }
-@font-face {
-    font-family: Golos;
-    src: url(fonts/GolosText_DemiBold.ttf);
-    font-weight: 600;
-    font-style: normal;
+.button
+{
+	border-radius: 2px;
+	font-size: 16px;
+	font-weight: 500;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	padding-bottom: 24px;
+	padding-left: 48px;
+	padding-right: 48px;
+	padding-top: 24px;
+	transition: 0.25s;
 }
-@font-face {
-    font-family: Golos;
-    src: url(fonts/GolosText_Medium.ttf);
-    font-weight: 500;
-    font-style: normal;
+.button:active,
+.button:focus
+{
+	outline: none;
 }
-@font-face {
-    font-family: Golos;
-    src: url(fonts/GolosText_Regular.ttf);
-    font-weight: 400;
-    font-style: normal;
+.button:hover
+{
+	cursor: pointer;
+	transition: 0.25s;
 }
-
-body {
-    background-color: #F2F2F2;
-    margin: 0;
-    /* padding: 50px 50px 0 50px; */
-    border: 0;
-    font-family: 'Golos';
-    font-size: 16px;
-    vertical-align: baseline;
+.circle
+{
+	background-color: white;
+	border-radius: 600px;
+	cursor: grab;
+	height: 600px;
+	width: 600px;
 }
-
-div {
-    margin: 0;
-    padding: 0;
+.circle:active
+{
+	cursor: grabbing;
 }
-
-canvas {
-    zoom: 0.5;
-    display: none;
+.content
+{
+	align-items: flex-start;
+	display: flex;
+	flex-direction: row-reverse;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	width: 100%;
 }
-
-h1 {
-    font-family: Golos;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 72px;
-    line-height: 75px;
-    margin-top: 0;
-    margin-bottom: 30px;
+.contorls
+{
+	margin-right: 100px;
 }
-
-h2 {
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 32px;
+.description
+{
+	display: none;
 }
-
-h3 {
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 28px;
+.fileUpload
+{
+	display: inline-block;
 }
-
-p {
-    font-family: Golos;
-    font-style: normal;
-    font-weight: normal;
+.head
+{
+	display: flex;
 }
-
-.content {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: row-reverse;
-    /* Короч был баг с тем, что если контролы стоять слева от баннера, то канвас почему-то обрезался сбоку в хроме. В сафари всё было чотко (кто-бы сомневался). Пришлось извернуться и в верстке поставить контролы справа и с помощью флекс-дирекш инверсировать порядок */
-    flex-wrap: wrap;
-    width: 50%;
-    margin: 0 auto;
-}
-
-.pointer {
-    cursor: pointer;
-}
-
-.none {
-    display: none;
-}
-
-.banner p {
-    font-size: 30px;
-    line-height: 40px;
-}
-
-.medium {
-    font-weight: 500;
-}
-
-.banner {
-    width: 1200px;
-    height: 600px;
-    background-color: #141414;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    zoom: 0.5;
-}
-
-.contorls {
-    margin-right: 100px;
-}
-
-.head,
-.title,
-.description,
-.tag_fill {
-    margin-left: 30px;
-}
-
-.description {
-    display: none;
-}
-
-.head {
-    display: flex;
-}
-
-.text {
-    width: 570px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.circle {
-    width: 600px;
-    height: 600px;
-    border-radius: 600px;
-    background-color: white;
-    cursor: grab;
-}
-
-.circle:active {
-    cursor: grabbing;
-}
-
 .head,
 .tags,
 .logo,
@@ -161,125 +80,204 @@ p {
 .tag_fulltime,
 .tag_remote,
 .tag_office
- {
-    height: 60px;
-    background-size: contain;
-    line-height: 58px;
+{
+	background-size: contain;
+	height: 60px;
+	line-height: 58px;
 }
-
-.logo {
-    background-image: url(images/logo.png);
-    margin-right: 30px;
-    width: 60px;
+.head,
+.title,
+.description,
+.tag_fill
+{
+	margin-left: 30px;
 }
-
-.tag_fill {
-    font-size: 30px;
-    line-height: 36px;
-    display: flex;
+.logo
+{
+	background-image: url(images/logo.png);
+	margin-right: 30px;
+	width: 60px;
 }
-
-.tag_fill div {
-    color: #141414;
-    background-color: white;
-    border-radius: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-left: 0;
-    margin-right: 0;
+.major
+{
+	background-color: #0066FF;
+	border: 0;
+	color: white;
+	width: 100%;
 }
-
-.tag_stroke {
-    color: white;
-    border: 2px solid white;
-    border-radius: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-left: 0;
-    margin-right: 0;
-    font-size: 30px;
+.major:hover
+{
+	background-color: #005CE5;
 }
-
-.button {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    font-weight: 500;
-    font-size: 16px;
-    border-radius: 2px;
-    padding-top: 24px;
-    padding-left: 48px;
-    padding-right: 48px;
-    padding-bottom: 24px;
-    transition: 0.25s;
+.medium
+{
+	font-weight: 500;
 }
-
-.button:hover {
-    cursor: pointer;
-    transition: 0.25s;
+.minor
+{
+	background-color: rgba(255, 255, 255, 1);
+	border: 1px solid rgba(0,0,0,0.2);
+	color: black;
 }
-
-.button:active,
-.button:focus {
-    outline: none;
+.minor:hover
+{
+	background-color: rgba(0,0,0,0.05);
 }
-
-.major {
-    background-color: #0066FF;
-    color: white;
-    border: 0;
-    width: 100%;
+.none
+{
+	display: none;
 }
-
-.major:hover {
-    background-color: #005CE5;
+.pointer
+{
+	cursor: pointer;
 }
-
-.minor {
-    background-color: rgba(255, 255, 255, 1);
-    color: black;
-    border: 1px solid rgba(0,0,0,0.2);
+.range
+{
+	margin-bottom: 30px;
 }
-
-.minor:hover {
-    background-color: rgba(0,0,0,0.05);
+.tag_fill
+{
+	display: flex;
+	font-size: 30px;
+	line-height: 36px;
 }
-
-/* .inputRadio {
-    margin-bottom: 5px;
-} */
-
-.range {
-    margin-bottom: 30px;
+.tag_fill div
+{
+	background-color: white;
+	border-radius: 30px;
+	color: #141414;
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 30px;
+	padding-right: 30px;
 }
-
-input[type=text] {
-    width: 100%;
-    padding: 15px 10px;
-    margin-top: 10px;
-    margin-bottom: 25px;
-    box-sizing: border-box;
-    border: 1px solid rgba(0,0,0,0.2);
-    border-radius: 2px;
-    font-size: 16px;
+.tag_stroke
+{
+	border: 2px solid white;
+	border-radius: 30px;
+	color: white;
+	font-size: 30px;
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 30px;
+	padding-right: 30px;
 }
-
-input[type="radio"] {
-    cursor: pointer;
-    margin-bottom: 20px;
+.text
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-bottom: 30px;
+	padding-top: 30px;
+	width: 570px;
 }
-
-input[type="file"] {
-    display: none;
+@font-face
+{
+	font-family: Golos;
+	font-style: normal;
+	font-weight: 700;
+	src: url(fonts/GolosText_Bold.ttf);
 }
-
-input[type="range"] {
-    width: 100%;
+@font-face
+{
+	font-family: Golos;
+	font-style: normal;
+	font-weight: 600;
+	src: url(fonts/GolosText_DemiBold.ttf);
 }
-
-input[type="button"] {
-    margin: 0;
+@font-face
+{
+	font-family: Golos;
+	font-style: normal;
+	font-weight: 500;
+	src: url(fonts/GolosText_Medium.ttf);
 }
-
-.fileUpload {
-    display: inline-block;
+@font-face
+{
+	font-family: Golos;
+	font-style: normal;
+	font-weight: 400;
+	src: url(fonts/GolosText_Regular.ttf);
+}
+@font-face
+{
+	font-family: Golos;
+	font-style: normal;
+	font-weight: 900;
+	src: url(fonts/GolosText_Black.ttf);
+}
+body
+{
+	background-color: #F2F2F2;
+	border: 0;
+	font-family: 'Golos';
+	font-size: 16px;
+	margin: 0;
+	vertical-align: baseline;
+}
+canvas
+{
+	display: none;
+	zoom: 0.5;
+}
+div
+{
+	margin: 0;
+	padding: 0;
+}
+h1
+{
+	font-family: Golos;
+	font-size: 72px;
+	font-style: normal;
+	font-weight: bold;
+	line-height: 75px;
+	margin-bottom: 30px;
+	margin-top: 0;
+}
+h2
+{
+	font-size: 28px;
+	font-weight: 600;
+	line-height: 32px;
+}
+h3
+{
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 28px;
+}
+input[type="button"]
+{
+	margin: 0;
+}
+input[type="file"]
+{
+	display: none;
+}
+input[type="radio"]
+{
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+input[type="range"]
+{
+	width: 100%;
+}
+input[type=text]
+{
+	border: 1px solid rgba(0,0,0,0.2);
+	border-radius: 2px;
+	box-sizing: border-box;
+	font-size: 16px;
+	margin-bottom: 25px;
+	margin-top: 10px;
+	padding: 15px 10px;
+	width: 100%;
+}
+p
+{
+	font-family: Golos;
+	font-style: normal;
+	font-weight: normal;
 }
