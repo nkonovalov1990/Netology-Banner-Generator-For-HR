@@ -2,63 +2,14 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Генератор баннеров для HR Нетологии</title>
+        <title>Test</title>
         <link rel="stylesheet" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
     <body>
 
-        <div class="contorls">
+        <div class="content">
 
-            <form class="inputText">
-                <label for="title">Название вакансии</label><br>
-                <input type="text" id="title" name="title"><br>
-
-                <label for="description">Описание вакансии</label><br>
-                <input type="text" id="description" name="description"><br>
-                
-            </form>
-
-            <form class="inputRadio">
-                <p class="medium">Цвет фона</p>
-                
-                <input type="radio" name="BannerColor" id="black" onClick="changeColor()" value="#141414" checked>
-                <label class="pointer" for="black">Черный</label><br>
-
-                <input type="radio" name="BannerColor" id="white" onClick="changeColor()" value="#FFFFFF">
-                <label class="pointer" for="white">Белый</label><br>
-
-                <input type="radio" name="BannerColor" id="red" onClick="changeColor()"value="#EB236B">
-                <label class="pointer" for="red">Красный</label><br>
-
-                <input type="radio" name="BannerColor" id="green" onClick="changeColor()" value="#4BD0A0">
-                <label class="pointer" for="green">Зеленый</label><br>
-
-                <input type="radio" name="BannerColor" id="blue" onClick="changeColor()" value="#0066FF">
-                <label class="pointer" for="blue">Синий</label><br>
-
-                <input type="radio" name="BannerColor" id="violet" onClick="changeColor()" value="#5D00F5">
-                <label class="pointer" for="violet">Фиолетовый</label><br>
-            </form>
-
-            <form>
-                <label for="getval" class="button minor fileUpload">
-                    <i class="fa fa-cloud-upload"></i> Выбрать каритнку для круга
-                </label>
-                <input id="getval" type="file" name="background-image">
-            </form>
-
-            <form class="range">
-                <p class="medium">Масштаб картинки в круге</p>
-
-                <input type="range" id="BackgroundSizeID" value="100" min="10" max="500" oninput="backgroundSizeChange()">
-            </form>
-
-            <input type="button" class="button major" value="Скачать баннер" onclick="HTMLToCanvas()">
-        
-        </div>
-
-        <div id="container">
             <div class="banner" id="banner">
                 <div class="text">
                     <div class="head">
@@ -78,7 +29,57 @@
                 <div class="circle" id="circle">
                 </div>
             </div>
-            </br>
+
+            <div class="contorls">
+
+                <form class="inputText">
+                    <label for="title">Название вакансии</label><br>
+                    <input type="text" id="title" name="title"><br>
+
+                    <label for="description">Описание вакансии</label><br>
+                    <input type="text" id="description" name="description"><br>
+                    
+                </form>
+
+                <form class="inputRadio">
+                    <p class="medium">Цвет фона</p>
+                    
+                    <input type="radio" name="BannerColor" id="black" onClick="changeColor()" value="#141414" checked>
+                    <label class="pointer" for="black">Черный</label></br>
+
+                    <input type="radio" name="BannerColor" id="white" onClick="changeColor()" value="#FFFFFF">
+                    <label class="pointer" for="white">Белый</label></br>
+
+                    <input type="radio" name="BannerColor" id="red" onClick="changeColor()"value="#EB236B">
+                    <label class="pointer" for="red">Красный</label></br>
+
+                    <input type="radio" name="BannerColor" id="green" onClick="changeColor()" value="#4BD0A0">
+                    <label class="pointer" for="green">Зеленый</label></br>
+
+                    <input type="radio" name="BannerColor" id="blue" onClick="changeColor()" value="#0066FF">
+                    <label class="pointer" for="blue">Синий</label></br>
+
+                    <input type="radio" name="BannerColor" id="violet" onClick="changeColor()" value="#5D00F5">
+                    <label class="pointer" for="violet">Фиолетовый</label>
+                </form>
+
+                <form>
+                    <label for="getval" class="button minor fileUpload">
+                        <i class="fa fa-cloud-upload"></i> Выбрать каритнку для круга
+                    </label>
+                    <input id="getval" type="file" name="background-image">
+                </form>
+
+                <form class="range">
+                    <p class="medium">Масштаб картинки в круге</p>
+
+                    <input type="range" id="BackgroundSizeID" value="100" min="10" max="500" oninput="backgroundSizeChange()">
+                </form>
+
+                <input type="button" class="button major" value="Скачать баннер" onclick="HTMLToCanvas()">
+            
+            </div>
+
         </div>
 
         <p class="none">
@@ -86,12 +87,13 @@
         </p>        
 
         </br>
+
         <canvas></canvas>
 
         <script src="script.js"></script>
-        <script src="canvas-toBlob.js"></script>
-        <script src="FileSaver.js"></script>
         <script src="draggableBG.js"></script>
+        <!-- <script src="canvas-toBlob.js"></script> -->
+        <script src="FileSaver.js"></script>
         <script src="html2canvas.min.js"></script>
         
     </body>

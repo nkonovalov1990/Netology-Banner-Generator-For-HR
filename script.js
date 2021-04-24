@@ -60,12 +60,18 @@ function readURL(){
     }
 }
 
+
+function backgroundSizeChange() {
+    var BGsize = document.getElementById("BackgroundSizeID").value;
+    $(".circle").css('background-size', BGsize + "%");
+}
+
 function HTMLToCanvas()
 {
     document.querySelector('canvas').outerHTML = "";
 
-    html2canvas(document.querySelector("#container")).then(canvas => {
-        document.getElementById("container").appendChild(canvas)  
+    html2canvas(document.querySelector("#banner")).then(canvas => {
+        document.querySelector("canvas").appendChild(canvas)  
     });;
 
     setTimeout(function() {
@@ -73,9 +79,4 @@ function HTMLToCanvas()
                 saveAs(blob, "netology_banner.png");
         });
     }, 100);
-}
-
-function backgroundSizeChange() {
-    var BGsize = document.getElementById("BackgroundSizeID").value;
-    $(".circle").css('background-size', BGsize + "%");
 }

@@ -32,21 +32,21 @@
 body {
     background-color: #F2F2F2;
     margin: 0;
-    padding: 50px 50px 0 50px;
+    /* padding: 50px 50px 0 50px; */
     border: 0;
     font-family: 'Golos';
-    vertical-align: baseline;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    flex-direction: row;
-    flex-wrap: wrap;
     font-size: 16px;
+    vertical-align: baseline;
 }
 
 div {
     margin: 0;
     padding: 0;
+}
+
+canvas {
+    zoom: 0.5;
+    display: none;
 }
 
 h1 {
@@ -77,6 +77,16 @@ p {
     font-weight: normal;
 }
 
+.content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    /* Короч был баг с тем, что если контролы стоять слева от баннера, то канвас почему-то обрезался сбоку в хроме. В сафари всё было чотко (кто-бы сомневался). Пришлось извернуться и в верстке поставить контролы справа и с помощью флекс-дирекш инверсировать порядок */
+    flex-wrap: wrap;
+    width: 50%;
+    margin: 0 auto;
+}
+
 .pointer {
     cursor: pointer;
 }
@@ -102,12 +112,6 @@ p {
     display: flex;
     justify-content: space-between;
     zoom: 0.5;
-}
-
-canvas {
-    zoom: 0.5;
-    display: none;
-    visibility: hidden;
 }
 
 .contorls {
@@ -240,9 +244,9 @@ canvas {
     background-color: rgba(0,0,0,0.05);
 }
 
-.inputRadio {
+/* .inputRadio {
     margin-bottom: 5px;
-}
+} */
 
 .range {
     margin-bottom: 30px;
