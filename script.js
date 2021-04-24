@@ -18,7 +18,7 @@ function changeColor(){
     var BannerColor = $('input[name="BannerColor"]:checked').val();
     if ( BannerColor != '#FFFFFF') {
         $(".logo")
-            .css('background-image', 'url(images/logo.png)');
+            .css('background-image', 'url(images/logo.svg)');
         $(".banner")
             .css('background-color', BannerColor)
             .css('color', '#FFFFFF');
