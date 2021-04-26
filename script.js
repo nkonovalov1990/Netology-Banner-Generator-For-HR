@@ -14,7 +14,40 @@ $("#description").keyup(function(){
         }
     });
 
-function changeColor(){
+
+$("div.color_square").click(function(){
+    var BannerColor = $( this ).css( "background-color" );
+    if ( BannerColor != '#FFFFFF') {
+        $(".logo")
+            .css('background-image', 'url(images/logo.png)');
+        $(".banner")
+            .css('background-color', BannerColor)
+            .css('color', '#FFFFFF');
+        $(".tag_vacancy")
+            .css('background-color', '')
+            .css('border-color', '#FFFFFF')
+            .css('color', '#FFFFFF');
+        $(".tag_fulltime, .tag_remote, .tag_office")
+            .css('background-color', '#FFFFFF')
+            .css('color', '#000000')
+            .css('border-color', '#000000');
+    } else {
+        $(".logo")
+            .css('background-image', 'url(images/logo_black.png)');
+        $(".banner")
+            .css('background-color', BannerColor)
+            .css('color', '#000000');
+        $(".tag_vacancy")
+            .css('background-color', '#FFFFFF')
+            .css('border-color', '#000000')
+            .css('color', '#000000');
+        $(".tag_fulltime, .tag_remote, .tag_office")
+            .css('background-color', '#000000')
+            .css('color', '#FFFFFF')
+            .css('border-color', '#FFFFFF');
+    }
+});
+function changeColor1(){
     var BannerColor = $('input[name="BannerColor"]:checked').val();
     if ( BannerColor != '#FFFFFF') {
         $(".logo")
@@ -74,9 +107,9 @@ function HTMLToCanvas()
         document.querySelector('.result').appendChild(canvas)  
     });;
 
-    setTimeout(function() {
-        document.querySelector('canvas').toBlob(function(blob) {
-                saveAs(blob, "netology_banner.png");
-        });
-    }, 100);
+    // setTimeout(function() {
+    //     document.querySelector('canvas').toBlob(function(blob) {
+    //             saveAs(blob, "netology_banner.png");
+    //     });
+    // }, 100);
 }

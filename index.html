@@ -7,91 +7,65 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
     <body>
-
+        <div class="result">
+            <canvas></canvas>
+        </div>
         <div class="content">
-
-            <div class="banner" id="banner">
-                <div class="text">
-                    <div class="head">
-                        <div class="logo"></div>
-                        <div class="tag_stroke tag_vacancy">вакансия</div>
-                    </div>
-                    <div>
-                        <h1 class="title">Название вакансии</h1>
-                        <p class="description">Описание вакансии</p>
-                    </div>
-                    <div class="tag_fill">
-                        <div class="tag_fulltime">фулл&nbsp;тайм</div>
-                        <div class="tag_remote">удалёнка</div>
-                        <div class="tag_office">офис</div>
-                    </div>
-                </div>
-                <div class="circle" id="circle">
-                </div>
-            </div>
-
-            <div class="contorls">
-
+            <div class="contorls_container">
                 <form class="inputText">
                     <label for="title">Название вакансии</label><br>
                     <input type="text" id="title" name="title"><br>
-
                     <label for="description">Описание вакансии</label><br>
                     <input type="text" id="description" name="description"><br>
-                    
                 </form>
-
-                <form class="inputRadio">
-                    <p class="medium">Цвет фона</p>
-                    
-                    <input type="radio" name="BannerColor" id="black" onClick="changeColor()" value="#141414" checked>
-                    <label class="pointer" for="black">Черный</label></br>
-
-                    <input type="radio" name="BannerColor" id="white" onClick="changeColor()" value="#FFFFFF">
-                    <label class="pointer" for="white">Белый</label></br>
-
-                    <input type="radio" name="BannerColor" id="red" onClick="changeColor()"value="#EB236B">
-                    <label class="pointer" for="red">Красный</label></br>
-
-                    <input type="radio" name="BannerColor" id="green" onClick="changeColor()" value="#4BD0A0">
-                    <label class="pointer" for="green">Зеленый</label></br>
-
-                    <input type="radio" name="BannerColor" id="blue" onClick="changeColor()" value="#0066FF">
-                    <label class="pointer" for="blue">Синий</label></br>
-
-                    <input type="radio" name="BannerColor" id="violet" onClick="changeColor()" value="#5D00F5">
-                    <label class="pointer" for="violet">Фиолетовый</label>
-                </form>
-
+                <div class="color_selection">
+                    <p>Цвет фона</p>
+                    </br>
+                    <div class="color_square shark"></div>
+                    <div class="color_square white"></div>
+                    <div class="color_square amaranth"></div>
+                    <div class="color_square shamrock"></div>
+                    <div class="color_square blue_ribbon"></div>
+                    <div class="color_square electric_violet"></div>
+                </div>
                 <form>
                     <label for="getval" class="button minor fileUpload">
                         <i class="fa fa-cloud-upload"></i> Выбрать каритнку для круга
                     </label>
                     <input id="getval" type="file" name="background-image">
                 </form>
-
                 <form class="range">
                     <p class="medium">Масштаб картинки в круге</p>
 
                     <input type="range" id="BackgroundSizeID" value="100" min="10" max="500" oninput="backgroundSizeChange()">
                 </form>
-
                 <input type="button" class="button major" value="Скачать баннер" onclick="HTMLToCanvas()">
-            
             </div>
-
+            <div class="banner_container">
+                <div class="banner" id="banner">
+                    <div class="text">
+                        <div class="head">
+                            <div class="logo"></div>
+                            <div class="tag_stroke tag_vacancy">вакансия</div>
+                        </div>
+                        <div>
+                            <h1 class="title">Название вакансии</h1>
+                            <p class="description">Описание вакансии</p>
+                        </div>
+                        <div class="tag_fill">
+                            <div class="tag_fulltime">фулл тайм</div>
+                            <div class="tag_remote">удалёнка</div>
+                            <div class="tag_office">офис</div>
+                        </div>
+                    </div>
+                    <div class="circle" id="circle">
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <p class="none">
+        <p style="display: none;">
             <input type="text" id="XYdata">
-        </p>        
-
-        </br>
-
-        <div class="result">
-            <canvas></canvas>
-        </div>
-
+        </p>
         <script src="script.js"></script>
         <script src="draggableBG.js"></script>
         <script src="canvas-toBlob.js"></script>

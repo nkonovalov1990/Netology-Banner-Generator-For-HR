@@ -7,6 +7,8 @@
 	justify-content: space-between;
 	width: 1200px;
 	zoom: 0.5;
+    white-space: normal;
+    float: right;
 }
 .banner p
 {
@@ -15,16 +17,16 @@
 }
 .button
 {
-	border-radius: 2px;
+	width: 100%;
+    text-align: center;
+    border-radius: 2px;
 	font-size: 16px;
 	font-weight: 500;
 	margin-bottom: 15px;
 	margin-top: 15px;
 	padding-bottom: 24px;
-	padding-left: 48px;
-	padding-right: 48px;
 	padding-top: 24px;
-	transition: 0.25s;
+	transition: 0.15s;
 }
 .button:active,
 .button:focus
@@ -34,7 +36,7 @@
 .button:hover
 {
 	cursor: pointer;
-	transition: 0.25s;
+	transition: 0.15s;
 }
 .circle
 {
@@ -49,17 +51,54 @@
 	cursor: grabbing;
 }
 .content
-{
-	align-items: flex-start;
-	display: flex;
-	flex-direction: row-reverse;
-	flex-wrap: wrap;
-	margin: 0 auto;
-	width: 100%;
+{   
+    display: flex;
+    justify-content: center;
 }
-.contorls
+.contorls_container
 {
-	margin-right: 100px;
+    width: 300px;
+    margin-right: 100px;
+}
+.color_selection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.color_selection p{
+    width: 100%;
+}
+.color_square {
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.color_selection > .shark {
+    background-color: #27292D;
+}
+.color_selection > .white {
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+.color_selection > .amaranth {
+    background-color: #EB236B;
+}
+.color_selection > .shamrock {
+    background-color: #4BD0A0;
+}
+.color_selection > .blue_ribbon {
+    background-color: #0066FF;
+}
+.color_selection > .electric_violet {
+    background-color: #5D00F5;
+}
+.color_selection > .shark:hover {
+    background-color: #1D1E21;
+}
+.color_selection > .white:hover {
+    background-color: #F2F2F2;
 }
 .description
 {
@@ -84,6 +123,7 @@
 	background-size: contain;
 	height: 60px;
 	line-height: 58px;
+    white-space: nowrap;
 }
 .head,
 .title,
@@ -109,10 +149,6 @@
 {
 	background-color: #005CE5;
 }
-.medium
-{
-	font-weight: 500;
-}
 .minor
 {
 	background-color: rgba(255, 255, 255, 1);
@@ -123,17 +159,14 @@
 {
 	background-color: rgba(0,0,0,0.05);
 }
-.none
-{
-	display: none;
-}
 .pointer
 {
 	cursor: pointer;
 }
 .range
 {
-	margin-bottom: 30px;
+    margin-top: 20px;
+	margin-bottom: 40px;
 }
 .tag_fill
 {
@@ -217,7 +250,6 @@ body
 }
 canvas
 {
-	display: none;
 	zoom: 0.5;
 }
 div
@@ -255,11 +287,6 @@ input[type="file"]
 {
 	display: none;
 }
-input[type="radio"]
-{
-	cursor: pointer;
-	margin-bottom: 20px;
-}
 input[type="range"]
 {
 	width: 100%;
@@ -280,4 +307,5 @@ p
 	font-family: Golos;
 	font-style: normal;
 	font-weight: normal;
+    margin: 0 0 16px 0;
 }
