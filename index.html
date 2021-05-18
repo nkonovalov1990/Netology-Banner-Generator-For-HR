@@ -13,24 +13,41 @@
         <div class="content">
             <div class="contorls_container">
                 <form class="inputText">
-                    <label for="title">Название вакансии</label><br>
-                    <input type="text" id="title" name="title"><br>
-                    <label for="description">Описание вакансии</label><br>
-                    <input type="text" id="description" name="description"><br>
+                    <div>
+                        <label for="title">Название</label>
+                        <input type="text" class="toggleable" name="title" autocomplete="off">
+                    </div>
+                    <div>
+                        <label for="description">Описание</label>
+                        <textarea type="text" class="toggleable" name="description" rows="2" autocomplete="off"></textarea>
+                    </div>
+                    <div>
+                        <label for="tags">Теги через запятую</label>
+                        <textarea type="text" id="formTags" name="tags" rows="2" autocomplete="off"></textarea>
+                    </div>
                 </form>
                 <div class="color_selection">
                     <p>Цвет фона</p>
                     </br>
-                    <div class="color_square shark"></div>
+                    <div class="color_square black selected"></div>
                     <div class="color_square white"></div>
                     <div class="color_square amaranth"></div>
                     <div class="color_square shamrock"></div>
                     <div class="color_square blue_ribbon"></div>
                     <div class="color_square electric_violet"></div>
                 </div>
+                
+                <div class="switch_container">
+                    <p>Добавить круг с картинкой</p>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
                 <form>
                     <label for="getval" class="button minor fileUpload">
-                        <i class="fa fa-cloud-upload"></i> Выбрать каритнку для круга
+                        Выбрать каритнку для круга
                     </label>
                     <input id="getval" type="file" name="background-image">
                 </form>
@@ -52,10 +69,10 @@
                             <h1 class="title">Название вакансии</h1>
                             <p class="description">Описание вакансии</p>
                         </div>
-                        <div class="tag_fill">
-                            <div class="tag_fulltime">фулл тайм</div>
-                            <div class="tag_remote">удалёнка</div>
-                            <div class="tag_office">офис</div>
+                        <div class="tag_fill" id="bannerTags">
+                            <div class="tag1 tag_bottom">фулл тайм</div>
+                            <div class="tag2 tag_bottom">удалёнка</div>
+                            <div class="tag3 tag_bottom">офис</div>
                         </div>
                     </div>
                     <div class="circle" id="circle">
